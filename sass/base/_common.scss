@@ -1,0 +1,42 @@
+body {
+    font-family: var(--main-font);
+    color: var(--mostly-black-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    background-color: var(--white-color);
+  }
+  img {
+    display: block;
+    height: auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  ul, ol {margin:0; padding: 0;}
+  
+  .list {
+    list-style: none;
+  }
+  .address {
+      font-style: normal;
+      margin-top: 20px;
+  }
+  
+  .icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--icons-default-color);
+  } 
