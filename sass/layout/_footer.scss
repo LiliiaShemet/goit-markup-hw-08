@@ -53,12 +53,18 @@
   }
   @media (min-width: 768px) {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 60px;
   }
 
   @media (min-width: 1200px) {
     align-items: baseline;
+  }
+
+  &-contacts {
+    @media (max-width: 479px), (max-width: 768px) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -95,6 +101,11 @@
   & .list {
       display: flex;
       justify-content: space-between;
+  }
+
+  @media (max-width: 479px) {
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
 
   @media (min-width: 480px) and (max-width: 768px){

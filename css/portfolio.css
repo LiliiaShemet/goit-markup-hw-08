@@ -208,6 +208,7 @@ ul, ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
   }
 }
 
@@ -662,7 +663,7 @@ ul, ol {
 @media (min-width: 768px) {
   .footer {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 60px;
   }
 }
@@ -670,6 +671,12 @@ ul, ol {
 @media (min-width: 1200px) {
   .footer {
     align-items: baseline;
+  }
+}
+
+@media (max-width: 479px), (max-width: 768px) {
+  .footer-contacts {
+    margin-bottom: 60px;
   }
 }
 
@@ -705,6 +712,13 @@ ul, ol {
 .come-on .list {
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 479px) {
+  .come-on {
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
