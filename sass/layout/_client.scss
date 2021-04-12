@@ -1,19 +1,29 @@
+.clients {
+  & .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .client-list {
   margin-top: -30px;
   margin-left: -30px;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
   &__item {
-    flex-basis: calc(100% / 6 - 30px);
     margin-left: 30px;
     margin-top: 30px;
-    border: 1px solid var(--icons-default-color);
-    border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    flex-basis: calc(100% / 2 - 30px);
+
     & .icon-link {
         height: 90px;
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
+        border: 1px solid var(--icons-default-color);
+        border-radius: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
         &:hover,
         &:focus {
             fill: var(--accent-color);
@@ -22,6 +32,14 @@
     &:hover,
     &:focus {
         border-color: var(--accent-color);
+    }
+
+    @media (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+  
+    @media (min-width: 1200px) {
+      flex-basis: calc(100% / 6 - 30px);
     }
   }
 }

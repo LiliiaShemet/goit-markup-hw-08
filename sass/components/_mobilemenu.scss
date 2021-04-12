@@ -1,0 +1,98 @@
+.mobile-menu {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    padding: 48px 40px;
+    background-color: white;
+    transform: translate(-50%, 0%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+    &.open {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0);
+    }
+  
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .burger-icon {
+    display: none;
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+  
+  // Стиль
+  .mobile-nav__link {
+    font-size: 40px;
+    line-height: 1.17;
+  
+    text-decoration: none;
+  
+    color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: #2196f3;
+    }
+  }
+  
+  .mobile-nav__active {
+    color: #2196f3;
+  }
+  .mobile-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-contact {
+    margin-bottom: 64px;
+  }
+  
+  .mobile-contact__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  
+  .mobile-contact__link--phone {
+    text-decoration: none;
+    font-size: 34px;
+    line-height: 1.17;
+    color: #2196f3;
+  }
+  .mobile-contact__link--email {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.16;
+    color: #757575;
+  }
+  
+  .mobile-social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mobile-social__item:not(:last-child)::after {
+    content: '';
+    width: 22px;
+    height: 0px;
+    margin: 0 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
+  
+  .mobile-social__link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #2196f3;
+  }
+  

@@ -1,14 +1,33 @@
 .filters {
-  & .list {
+  & .list-btn {
       display: flex;
       justify-content: center;
       padding-top: 47px;
       margin-bottom: 50px;
-      padding: 0;
+      margin-top: calc(-1 * 15px);
+      margin-left: calc(-1 * 8px);
+      padding: 0px;
+      flex-wrap: wrap;
       
-      & .list-item:not(:last-child) {
+      &__item:not(:last-child) {
+        @media (min-width: 1200px), (min-width: 768px)  {
           margin-right: 8px;
-      }    
+        }
+      }  
+      
+      &__item {
+        @media (max-width: 768px) {
+          margin-top: 15px;
+          margin-left: 8px;
+        }
+        @media (min-width: 1200px) {
+          margin-bottom: 50px;
+        }
+      }
+
+      @media (min-width: 480px) and (max-width: 767px) {
+        justify-content: left;
+      }
   }
 }
 
