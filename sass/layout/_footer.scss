@@ -20,7 +20,7 @@
       display: flex;
       align-items: baseline;*/
       align-items: center;
-     padding: auto;
+      padding: auto;
 
       @media (min-width: 1200px) {
         display: flex;
@@ -28,7 +28,7 @@
         align-items: baseline;
       }
     
-      @media (min-width: 768,px) and (max-width: 1199px) {
+      @media (min-width: 768px) and (max-width: 1199px) {
         margin-bottom: 60px;
         text-align: center;
       }
@@ -64,6 +64,7 @@
   &-contacts {
     @media (max-width: 479px), (max-width: 768px) {
       margin-bottom: 60px;
+      text-align: center;
     }
   }
 }
@@ -83,6 +84,7 @@
 
 .come-on {
   width: 206px;
+  text-align: center;
 
   & .icon-link {
       width: 44px;
@@ -110,19 +112,17 @@
 
   @media (min-width: 480px) and (max-width: 768px){
     margin: 0 auto;
-    align-items: baseline;
     margin-top: 20px;
   }
 
   @media (min-width: 768px) {
     margin-left: auto;
-    align-items: baseline;
     /*margin-top: -40px;*/
   }
 
   @media (min-width: 1200px) {
     margin-left: 70px;
-    margin-right: auto;
+    
     /*margin-top: -40px;*/
   }
 }
@@ -218,8 +218,9 @@
     color: var(--white-color);
     
   }
-  @media (min-width: 480px) and (min-width: 768px) {
+  @media (min-width: 480px), (min-width: 768px), (min-width: 320px) {
     align-items: center;
+    text-align: center;
   }
 }
 

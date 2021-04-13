@@ -4,13 +4,6 @@
   width: 100%;
   height: 100%; 
   padding: 40px; 
-  position: fixed;
-  z-index: 50;
-  overflow-y: scroll;
-  @media screen and (max-width: 768px) {
-    padding: 40px;
-    position: relative;
-  }
 
   &__title {
       display: block;
@@ -105,11 +98,13 @@
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
-    letter-spacing: var(--letter-spacing);
+    letter-spacing: 0.01em;
     border-color: var(--dark-gray-color);
     color: var(--dark-gray-color);
     font-weight: normal;
-
+    justify-content: space-evenly;
+    
+    flex-wrap: wrap;
       &::before {
           content: "";
           background-image: url(../images/checkbox/checkbox.svg);
@@ -146,8 +141,8 @@
 
   .confidence-link {
       font-size: 12px;
-      line-height: 1.7;
-      letter-spacing: var(--letter-spacing);
+      line-height: 1.17;
+      letter-spacing: 0.01em;
       color: var(--accent-color);
       text-decoration: underline;
       

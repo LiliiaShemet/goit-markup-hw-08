@@ -126,6 +126,7 @@ ul, ol {
     position: relative;
     justify-content: space-between;
     padding: 32px 0px;
+    margin: 0 15px;
   }
 }
 
@@ -399,9 +400,28 @@ ul, ol {
   color: var(--white-color);
 }
 
-@media (max-width: 479px), (min-width: 480px) {
+@media screen and (max-width: 1199px) {
+  .header .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .logo {
-    margin-left: 15px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .header .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -424,6 +444,7 @@ ul, ol {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  background-position: center;
 }
 
 .hero .container {
@@ -567,8 +588,16 @@ ul, ol {
 }
 
 .card-project .name-card {
+  border: 1px solid tomato;
+  border-top: none;
   text-align: left;
   padding: 20px 24px;
+}
+
+@media screen and (max-width: 1199px) {
+  .card-project {
+    flex-grow: 1;
+  }
 }
 
 .card-project__link {
@@ -628,7 +657,7 @@ ul, ol {
 }
 
 .footer-bg .container {
-  /*padding-top: 0px;
+  /*<padding-top: 0px;
       display: flex;
       align-items: baseline;*/
   align-items: center;
@@ -643,7 +672,7 @@ ul, ol {
   }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .footer-bg .container {
     margin-bottom: 60px;
     text-align: center;
@@ -684,6 +713,7 @@ ul, ol {
 @media (max-width: 479px), (max-width: 768px) {
   .footer-contacts {
     margin-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -701,6 +731,7 @@ ul, ol {
 
 .come-on {
   width: 206px;
+  text-align: center;
 }
 
 .come-on .icon-link {
@@ -731,7 +762,6 @@ ul, ol {
 @media (min-width: 480px) and (max-width: 768px) {
   .come-on {
     margin: 0 auto;
-    align-items: baseline;
     margin-top: 20px;
   }
 }
@@ -739,7 +769,6 @@ ul, ol {
 @media (min-width: 768px) {
   .come-on {
     margin-left: auto;
-    align-items: baseline;
     /*margin-top: -40px;*/
   }
 }
@@ -747,7 +776,6 @@ ul, ol {
 @media (min-width: 1200px) {
   .come-on {
     margin-left: 70px;
-    margin-right: auto;
     /*margin-top: -40px;*/
   }
 }
@@ -858,9 +886,10 @@ ul, ol {
   color: var(--white-color);
 }
 
-@media (min-width: 480px) and (min-width: 768px) {
+@media (min-width: 480px), (min-width: 768px), (min-width: 320px) {
   .subscription {
     align-items: center;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

@@ -126,6 +126,7 @@ ul, ol {
     position: relative;
     justify-content: space-between;
     padding: 32px 0px;
+    margin: 0 15px;
   }
 }
 
@@ -399,9 +400,28 @@ ul, ol {
   color: var(--white-color);
 }
 
-@media (max-width: 479px), (min-width: 480px) {
+@media screen and (max-width: 1199px) {
+  .header .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header .logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .logo {
-    margin-left: 15px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+  .header .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -424,6 +444,7 @@ ul, ol {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+  background-position: center;
 }
 
 .hero .container {
@@ -930,7 +951,7 @@ ul, ol {
 }
 
 .footer-bg .container {
-  /*padding-top: 0px;
+  /*<padding-top: 0px;
       display: flex;
       align-items: baseline;*/
   align-items: center;
@@ -945,7 +966,7 @@ ul, ol {
   }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .footer-bg .container {
     margin-bottom: 60px;
     text-align: center;
@@ -986,6 +1007,7 @@ ul, ol {
 @media (max-width: 479px), (max-width: 768px) {
   .footer-contacts {
     margin-bottom: 60px;
+    text-align: center;
   }
 }
 
@@ -1003,6 +1025,7 @@ ul, ol {
 
 .come-on {
   width: 206px;
+  text-align: center;
 }
 
 .come-on .icon-link {
@@ -1033,7 +1056,6 @@ ul, ol {
 @media (min-width: 480px) and (max-width: 768px) {
   .come-on {
     margin: 0 auto;
-    align-items: baseline;
     margin-top: 20px;
   }
 }
@@ -1041,7 +1063,6 @@ ul, ol {
 @media (min-width: 768px) {
   .come-on {
     margin-left: auto;
-    align-items: baseline;
     /*margin-top: -40px;*/
   }
 }
@@ -1049,7 +1070,6 @@ ul, ol {
 @media (min-width: 1200px) {
   .come-on {
     margin-left: 70px;
-    margin-right: auto;
     /*margin-top: -40px;*/
   }
 }
@@ -1160,9 +1180,10 @@ ul, ol {
   color: var(--white-color);
 }
 
-@media (min-width: 480px) and (min-width: 768px) {
+@media (min-width: 480px), (min-width: 768px), (min-width: 320px) {
   .subscription {
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -1178,12 +1199,9 @@ ul, ol {
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 93px 15px;
-}
-
-@media (min-width: 768px) {
-  .backdrop {
+  /* @media (min-width: 768px) {
     padding-top: 208px;
-  }
+  }*/
 }
 
 .modal {
@@ -1323,23 +1341,25 @@ ul, ol {
 
 .modal-form-checkbox {
   display: flex;
-  letter-spacing: var(--letter-spacing);
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   border-color: var(--dark-gray-color);
-  justify-content: space-evenly;
   color: var(--dark-gray-color);
   font-weight: normal;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
 .modal-form-checkbox::before {
   content: "";
-  display: block;
   background-image: url(../images/checkbox/checkbox.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 16px;
   height: 16px;
-  margin-right: 7px;
+  margin-right: 2px;
   border: 2px solid var(--mostly-black-color);
   border-radius: 2px;
   cursor: pointer;
@@ -1362,38 +1382,19 @@ ul, ol {
   outline: none;
 }
 
-@media (max-width: 479px) {
-  .modal-form-checkbox {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .modal-form-checkbox {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
-
 .confidence-link {
-  font-size: 14px;
-  line-height: 1.7;
-  letter-spacing: var(--letter-spacing);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
   color: var(--accent-color);
   text-decoration: underline;
-}
-
-@media (max-width: 479px) {
-  .confidence-link {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .confidence-link {
-    font-size: 14px;
-    line-height: 1.7;
-  }
+  /*@media (max-width: 479px) {
+        font-size: 9px;  
+      }
+      
+      @media (min-width: 1200px) {
+        font-size: 9px;  
+      }*/
 }
 
 .submit-btn {
