@@ -28,6 +28,10 @@
       @media (min-width: 480px) and (max-width: 767px) {
         justify-content: left;
       }
+
+      @media (max-width: 479px){
+        justify-content: flex-start;
+      }
   }
 }
 

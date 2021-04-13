@@ -778,6 +778,12 @@ ul, ol {
   }
 }
 
+@media (max-width: 479px) {
+  .filters .list-btn {
+    justify-content: flex-start;
+  }
+}
+
 .team {
   background-color: var(--background-color);
 }
@@ -841,6 +847,12 @@ ul, ol {
 
 .name-card .icon-link:hover svg, .name-card .icon-link:focus svg {
   fill: var(--white-color);
+}
+
+.card-team img {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 .clients .container {
@@ -1149,21 +1161,30 @@ ul, ol {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   scale: 1;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 93px 15px;
+}
+
+@media (min-width: 768px) {
+  .backdrop {
+    padding-top: 208px;
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  position: relative;
+  /*top: 50%;
+  left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  margin: 0 auto;
+  max-width: 450px;
+  overflow-y: scroll;
   border-radius: 4px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1186,6 +1207,12 @@ ul, ol {
   color: var(--accent-color);
   border-color: 1px solid var(--accent-color);
   fill: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    max-width: 528;
+  }
 }
 
 .is-hidden {
@@ -1287,14 +1314,12 @@ ul, ol {
 
 .modal-form-checkbox {
   display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 1.7;
   letter-spacing: var(--letter-spacing);
   border-color: var(--dark-gray-color);
-  justify-content: center;
+  justify-content: space-evenly;
   color: var(--dark-gray-color);
   font-weight: normal;
+  flex-wrap: wrap;
 }
 
 .modal-form-checkbox::before {
@@ -1328,13 +1353,38 @@ ul, ol {
   outline: none;
 }
 
-/*  */
+@media (max-width: 479px) {
+  .modal-form-checkbox {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-form-checkbox {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
 .confidence-link {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: var(--letter-spacing);
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+@media (max-width: 479px) {
+  .confidence-link {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .confidence-link {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .submit-btn {
