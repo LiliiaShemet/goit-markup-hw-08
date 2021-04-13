@@ -16,11 +16,11 @@
   background: var(--dark-graylish-blue-color);
   
   & .container {
-      /*padding-top: 0px;
+      /*<padding-top: 0px;
       display: flex;
       align-items: baseline;*/
       align-items: center;
-      padding: auto;
+     padding: auto;
 
       @media (min-width: 1200px) {
         display: flex;
@@ -28,7 +28,7 @@
         align-items: baseline;
       }
     
-      @media (max-width: 1199px) {
+      @media (min-width: 768,px) and (max-width: 1199px) {
         margin-bottom: 60px;
         text-align: center;
       }
