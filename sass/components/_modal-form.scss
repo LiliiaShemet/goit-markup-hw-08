@@ -103,15 +103,14 @@
     color: var(--dark-gray-color);
     font-weight: normal;
     justify-content: space-evenly;
-    
+
     flex-wrap: wrap;
       &::before {
           content: "";
-          background-image: url(../images/checkbox/checkbox.svg);
           background-repeat: no-repeat;
           background-size: contain;
-          width: 16px;
-          height: 16px;
+          width: 15px;
+          height: 15px;
           margin-right: 2px;
           border: 2px solid var(--mostly-black-color);
           border-radius: 2px;
