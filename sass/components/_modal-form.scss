@@ -133,7 +133,11 @@
               outline: none;
           }
       }
-
+      
+      @media (min-width: 768px), (min-width: 1200px) {
+        font-size: 14px;
+        letter-spacing: 0.03em;  
+      }
   }
 
   .confidence-link {
@@ -143,13 +147,10 @@
       color: var(--accent-color);
       text-decoration: underline;
       
-      /*@media (max-width: 479px) {
-        font-size: 9px;  
+      @media (min-width: 768px), (min-width: 1200px) {
+        font-size: 14px;
+        letter-spacing: 0.03em;  
       }
-      
-      @media (min-width: 1200px) {
-        font-size: 9px;  
-      }*/
   }
   
   .submit-btn {

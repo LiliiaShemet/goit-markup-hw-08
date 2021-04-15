@@ -28,12 +28,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   background-color: var(--white-color);
-}
-
-@media (max-width: 480px) {
-  body {
-    min-width: 460px;
-  }
+  /*@media (max-width: 480px) {
+      min-width: 460px;
+    }*/
 }
 
 img {
@@ -74,6 +71,24 @@ ul, ol {
   fill: var(--icons-default-color);
 }
 
+@media (max-width: 480px) {
+  section {
+    min-width: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    min-width: 460px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    min-width: 460px;
+  }
+}
+
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -90,7 +105,12 @@ ul, ol {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-width: 460px;
+  }
 }
 
 @media (min-width: 480px) {
@@ -1267,7 +1287,7 @@ ul, ol {
 
 @media (min-width: 1200px) {
   .modal {
-    max-width: 528;
+    max-width: 528px;
   }
 }
 
@@ -1408,19 +1428,26 @@ ul, ol {
   outline: none;
 }
 
+@media (min-width: 768px), (min-width: 1200px) {
+  .modal-form-checkbox {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+}
+
 .confidence-link {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--accent-color);
   text-decoration: underline;
-  /*@media (max-width: 479px) {
-        font-size: 9px;  
-      }
-      
-      @media (min-width: 1200px) {
-        font-size: 9px;  
-      }*/
+}
+
+@media (min-width: 768px), (min-width: 1200px) {
+  .confidence-link {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
 }
 
 .submit-btn {
