@@ -21,9 +21,9 @@
   <body>
     <header class="header">
       <div class="container">
-        <nav class="nav-menu">
           <!--Логотип-->
           <a href="" class="logo link logo_light"><span class="letter">Web</span>Studio</a>
+          <nav class="nav-menu">
           <ul class="nav-menu-list list">
             <li class="nav-menu-list__item">
               <a href="./index.html" class="nav-link link nav-link_active">Студия</a>
@@ -505,8 +505,8 @@
     </section>
     <!--Постоянные Клиенты-->
     <section class="clients">
-      <div class="container">
-          <h2 class="about__title">Постоянные клиенты</h2>
+      <div class="container clients__container">
+          <!--h2 class="about__title">Постоянные клиенты</h2-->
           <ul class="client-list card-set list">
               <li class="client-list__item">
                   <a class="icon-link link" href="">
@@ -684,8 +684,9 @@
           <!--check-box-->
           <input class="chekbox-square visually-hidden"  type="checkbox" name="confidence" value="checkbox" id="confidence">
           <label for="confidence" class="modal-form-checkbox">
-             Соглашаюсь с рассылкой и принимаю&nbsp;
-           <a href="" class="confidence-link">Условия договора</a>
+            <span class="unchecked"></span>
+            Соглашаюсь с рассылкой и принимаю&nbsp;
+            <a href="" class="confidence-link">Условия договора</a>
           </label>
               
          <button type="submit" class="submit-btn"><span class="submit-text">Отправить</span></button>

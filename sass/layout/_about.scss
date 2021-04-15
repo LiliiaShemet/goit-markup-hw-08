@@ -113,6 +113,7 @@
   }
 
   &__item-primary {
+      display: flex;
       position: relative;
       margin-left: var(--card-set-gap);
       margin-top: var(--card-set-gap);

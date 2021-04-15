@@ -84,6 +84,7 @@ ul, ol {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 480px) {
@@ -112,21 +113,34 @@ ul, ol {
 
 .header {
   background: var(--white-color);
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid #ececec;
 }
 
 .header .container {
   display: flex;
+  align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 479px) {
+  .header .container {
+    padding: 0 15px;
+    position: relative;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
   .header .container {
     position: relative;
     justify-content: space-between;
-    padding: 32px 0px;
-    margin: 0 15px;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 479px) {
+  .header {
+    position: relative;
+    justify-content: space-between;
   }
 }
 
@@ -409,6 +423,7 @@ ul, ol {
 
 @media screen and (max-width: 767px) {
   .header .logo {
+    position: relative;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -676,6 +691,7 @@ ul, ol {
 }
 
 .card-set__item-primary {
+  display: flex;
   position: relative;
   margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
@@ -883,7 +899,7 @@ ul, ol {
   width: 100%;
 }
 
-.clients .container {
+.clients__container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -1075,6 +1091,10 @@ ul, ol {
 }
 
 /* subscription-form */
+.sign-up {
+  overflow-y: hidden;
+}
+
 .sign-up__email {
   position: relative;
   width: 100%;
@@ -1090,7 +1110,6 @@ ul, ol {
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: var(--letter-spacing);
-  margin-right: 15px;
 }
 
 .sign-up__email::placeholder {
@@ -1102,21 +1121,22 @@ ul, ol {
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .sign-up__email {
-    width: 450px;
+    max-width: 450px;
     margin: 0;
   }
 }
 
 @media (min-width: 1200px) {
   .sign-up__email {
-    width: 358px;
+    max-width: 358px;
     margin: 0;
   }
 }
 
 .sign-up__btn {
-  width: 200px;
-  height: 50px;
+  position: relative;
+  max-width: 200px;
+  max-height: 50px;
   padding: 10px 28px;
   background-color: var(--accent-color);
   border-radius: 4px;
@@ -1191,14 +1211,13 @@ ul, ol {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
+  padding: 93px 0px;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
-  scale: 1;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 93px 15px;
   /* @media (min-width: 768px) {
     padding-top: 208px;
   }*/
@@ -1209,6 +1228,7 @@ ul, ol {
   /*top: 50%;
   left: 50%;*/
   /*transform: translate(-50%, -50%);*/
+  padding: 40px;
   margin: 0 auto;
   max-width: 450px;
   overflow-y: scroll;
@@ -1250,11 +1270,7 @@ ul, ol {
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+  justify-content: center;
 }
 
 .form__title {
@@ -1348,11 +1364,11 @@ ul, ol {
   border-color: var(--dark-gray-color);
   color: var(--dark-gray-color);
   font-weight: normal;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+  float: left;
 }
 
-.modal-form-checkbox::before {
+.modal-form-checkbox .unchecked {
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
@@ -1362,15 +1378,14 @@ ul, ol {
   border: 2px solid var(--mostly-black-color);
   border-radius: 2px;
   cursor: pointer;
-  scale: 1;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.chekbox-square:focus + .modal-form-checkbox::before {
+.chekbox-square:focus + .modal-form-checkbox .unchecked {
   box-shadow: 0 0 0 2px var(--accent-color);
 }
 
-.chekbox-square:checked + .modal-form-checkbox::before {
+.chekbox-square:checked + .modal-form-checkbox .unchecked {
   background-image: url(../images/checkbox/vector.svg);
   background-repeat: no-repeat;
   background-size: contain;
