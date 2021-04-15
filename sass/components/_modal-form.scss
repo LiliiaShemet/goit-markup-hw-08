@@ -1,5 +1,9 @@
 .form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-content: center;
+
   &__title {
       display: block;
       margin-bottom: 12px;
@@ -97,7 +101,7 @@
     border-color: var(--dark-gray-color);
     color: var(--dark-gray-color);
     font-weight: normal;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     float: left;
 
       & .unchecked {
