@@ -32,7 +32,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    min-width: 450px;
+    min-width: 460px;
   }
 }
 
