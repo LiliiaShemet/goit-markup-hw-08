@@ -103,6 +103,8 @@
     font-weight: normal;
     flex-wrap: wrap;
     float: left;
+    justify-content: space-evenly;
+      
 
       & .unchecked {
           content: "";

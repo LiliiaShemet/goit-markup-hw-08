@@ -8,9 +8,9 @@ body {
     letter-spacing: 0.02em;
     background-color: var(--white-color);
 
-    /*@media (max-width: 480px) {
-      min-width: 460px;
-    }*/
+    @media (max-width: 480px) {
+      min-width: 450px;
+    }
   }
   img {
     display: block;
