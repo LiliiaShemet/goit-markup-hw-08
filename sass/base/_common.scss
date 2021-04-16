@@ -45,21 +45,3 @@ body {
     align-items: center;
     fill: var(--icons-default-color);
   } 
-
-  section {
-    @media (max-width: 480px) {
-      min-width: 460px;
-    }
-  }
-
-  footer {
-    @media (max-width: 480px) {
-      min-width: 460px;
-    }
-  }
-  
-  header {
-    @media (max-width: 480px) {
-      min-width: 460px;
-    }
-  }

@@ -54,6 +54,7 @@
   @media (min-width: 768px) {
     display: flex;
     align-items: baseline;
+    justify-content: space-around;
     margin-bottom: 60px;
   }
 
@@ -110,15 +111,15 @@
     margin-bottom: 60px;
   }
 
-  @media (min-width: 480px) and (max-width: 768px){
+  @media (min-width: 480px) and (max-width: 767px){
     margin: 0 auto;
     margin-top: 20px;
   }
 
-  @media (min-width: 768px) {
+  /*@media (min-width: 768px) {
     margin-left: auto;
-    /*margin-top: -40px;*/
-  }
+    margin-top: -40px;
+  }*/
 
   @media (min-width: 1200px) {
     margin-left: 70px;

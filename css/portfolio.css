@@ -71,24 +71,6 @@ ul, ol {
   fill: var(--icons-default-color);
 }
 
-@media (max-width: 480px) {
-  section {
-    min-width: 460px;
-  }
-}
-
-@media (max-width: 480px) {
-  footer {
-    min-width: 460px;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    min-width: 460px;
-  }
-}
-
 .visually-hidden {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
@@ -105,12 +87,6 @@ ul, ol {
   padding-left: 15px;
   padding-right: 15px;
   width: 100%;
-}
-
-@media (max-width: 480px) {
-  .container {
-    min-width: 460px;
-  }
 }
 
 @media (min-width: 480px) {
@@ -742,6 +718,7 @@ ul, ol {
   .footer {
     display: flex;
     align-items: baseline;
+    justify-content: space-around;
     margin-bottom: 60px;
   }
 }
@@ -774,6 +751,10 @@ ul, ol {
 .come-on {
   width: 206px;
   text-align: center;
+  /*@media (min-width: 768px) {
+    margin-left: auto;
+    margin-top: -40px;
+  }*/
 }
 
 .come-on .icon-link {
@@ -801,17 +782,10 @@ ul, ol {
   }
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .come-on {
     margin: 0 auto;
     margin-top: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .come-on {
-    margin-left: auto;
-    /*margin-top: -40px;*/
   }
 }
 
