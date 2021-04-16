@@ -894,10 +894,6 @@ ul, ol {
   }
 }
 
-.subscription {
-  display: block;
-}
-
 .subscription__title {
   display: block;
   margin-bottom: 20px;
@@ -909,7 +905,7 @@ ul, ol {
   color: var(--white-color);
 }
 
-@media (min-width: 480px), (min-width: 768px), (min-width: 320px) {
+@media (max-width: 1199px) {
   .subscription {
     align-items: center;
     text-align: center;

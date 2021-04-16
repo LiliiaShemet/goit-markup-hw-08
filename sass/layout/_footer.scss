@@ -208,7 +208,7 @@
 
 
 .subscription {
-  display: block;
+  
   &__title {
     display: block;
     margin-bottom: 20px;
@@ -218,9 +218,9 @@
     letter-spacing: var(--letter-spacing);
     text-transform: uppercase;
     color: var(--white-color);
-    
+
   }
-  @media (min-width: 480px), (min-width: 768px), (min-width: 320px) {
+  @media  (max-width: 1199px) {
     align-items: center;
     text-align: center;
   }
