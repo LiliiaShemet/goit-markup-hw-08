@@ -30,12 +30,6 @@ body {
   background-color: var(--white-color);
 }
 
-@media (max-width: 480px) {
-  body {
-    min-width: 450px;
-  }
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -337,6 +331,7 @@ ul, ol {
 @media (max-width: 767px) {
   .burger-icon {
     display: block;
+    margin-left: auto;
   }
 }
 
@@ -1356,6 +1351,7 @@ ul, ol {
 
 .modal-form-checkbox {
   display: flex;
+  position: relative;
   align-items: center;
   font-size: 12px;
   line-height: 1.17;
@@ -1364,12 +1360,14 @@ ul, ol {
   color: var(--dark-gray-color);
   font-weight: normal;
   flex-wrap: wrap;
-  float: left;
   justify-content: space-evenly;
 }
 
 .modal-form-checkbox .unchecked {
   content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
   background-repeat: no-repeat;
   background-size: contain;
   width: 15px;
@@ -1379,6 +1377,7 @@ ul, ol {
   border-radius: 2px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-50%);
 }
 
 .chekbox-square:focus + .modal-form-checkbox .unchecked {
@@ -1394,6 +1393,10 @@ ul, ol {
   background-position: center;
   transform: scale(1.2);
   outline: none;
+}
+
+.modal-form-checkbox-text {
+  margin-left: 24px;
 }
 
 @media (min-width: 768px), (min-width: 1200px) {

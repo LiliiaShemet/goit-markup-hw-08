@@ -94,6 +94,7 @@
 
   .modal-form-checkbox {
     display: flex;
+    position: relative;
     align-items: center;
     font-size: 12px;
     line-height: 1.17;
@@ -102,12 +103,14 @@
     color: var(--dark-gray-color);
     font-weight: normal;
     flex-wrap: wrap;
-    float: left;
     justify-content: space-evenly;
       
 
       & .unchecked {
           content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
           background-repeat: no-repeat;
           background-size: contain;
           width: 15px;
@@ -116,10 +119,11 @@
           border: 2px solid var(--mostly-black-color);
           border-radius: 2px;
           cursor: pointer;  
-
           transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-          transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-          background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                      transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                      background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+          transform: translateY(-50%);
+
           .chekbox-square:focus + & {
                 box-shadow: 0 0 0 2px var(--accent-color);
           }
@@ -134,6 +138,10 @@
               transform: scale(1.2);
               outline: none;
           }
+      }
+      
+      &-text {
+        margin-left: 24px;
       }
       
       @media (min-width: 768px), (min-width: 1200px) {

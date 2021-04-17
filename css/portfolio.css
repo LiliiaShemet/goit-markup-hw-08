@@ -30,12 +30,6 @@ body {
   background-color: var(--white-color);
 }
 
-@media (max-width: 480px) {
-  body {
-    min-width: 450px;
-  }
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -337,6 +331,7 @@ ul, ol {
 @media (max-width: 767px) {
   .burger-icon {
     display: block;
+    margin-left: auto;
   }
 }
 
